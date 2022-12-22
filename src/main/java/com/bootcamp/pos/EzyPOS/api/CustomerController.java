@@ -1,6 +1,6 @@
 package com.bootcamp.pos.EzyPOS.api;
 
-import com.bootcamp.pos.EzyPOS.api.DTO.RequestDTO.CustomerDTO;
+import com.bootcamp.pos.EzyPOS.dto.RequestDTO.CustomerDTO;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

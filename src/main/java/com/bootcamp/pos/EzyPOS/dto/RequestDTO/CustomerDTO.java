@@ -1,4 +1,4 @@
-package com.bootcamp.pos.EzyPOS.api.DTO.RequestDTO;
+package com.bootcamp.pos.EzyPOS.dto.RequestDTO;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,8 +8,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class CustomerDTO {
-    private int id;
+    private String id;
     private String name;
     private String address;
-    private int age;
+    private double Salary;
 }
