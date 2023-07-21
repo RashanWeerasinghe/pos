@@ -1,46 +1,63 @@
 package com.bootcamp.pos.EzyPOS.service.impl;
 
 import com.bootcamp.pos.EzyPOS.dto.RequestDTO.CustomerDTO;
+import com.bootcamp.pos.EzyPOS.enitiy.Account;
 import com.bootcamp.pos.EzyPOS.enitiy.Customer;
+//import com.bootcamp.pos.EzyPOS.repo.CustomerRepo;
+import com.bootcamp.pos.EzyPOS.repo.AccountRepo;
 import com.bootcamp.pos.EzyPOS.repo.CustomerRepo;
 import com.bootcamp.pos.EzyPOS.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 @Service
 public class CustomerImpl implements CustomerService {
 
-    @Autowired
-    private CustomerRepo customerRepo;
-
+    private AccountRepo accountRepo;
 
     @Override
-    public String saveCustomer(CustomerDTO dto) {
+    public String Transaction(int value) {
 
-        Customer c1=new Customer("1D", dto.getName(),dto.getAddress(),dto.getSalary());
-
-        customerRepo.save(c1);
-        return c1.getId()+" Saved!";
+        Account a1=accountRepo.findOne(1);
+        System.out.println(a1);
+        return "done!";
     }
 
-    @Override
-    public String findCustomer(String id) {
-        return null;
-    }
+//    @Autowired
+//    private CustomerRepo customerRepo;
 
-    @Override
-    public String updateCustomer(CustomerDTO dto, String id) {
-        return null;
-    }
 
-    @Override
-    public String deleteCustomer(String id) {
-        return null;
-    }
+//    @Override
+//    public String saveCustomer(CustomerDTO customerDTO) {
+//
+////        Customer c1=new Customer("1D", dto.getName(),dto.getAddress(),dto.getSalary());
+////
+////        customerRepo.save(c1);
+////        return c1.getId()+" Saved!";
+//
+//        return customerDTO+" Saved!";
+//    }
 
-    @Override
-    public String findAllCustomer() {
-        return null;
-    }
+//    @Override
+//    public String findCustomer(String id) {
+//        return null;
+//    }
+//
+//    @Override
+//    public String updateCustomer(CustomerDTO dto, String id) {
+//        return null;
+//    }
+//
+//    @Override
+//    public String deleteCustomer(String id) {
+//        return null;
+//    }
+//
+//    @Override
+//    public String findAllCustomer() {
+//        return null;
+//    }
 }
